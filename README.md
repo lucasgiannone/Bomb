@@ -1,5 +1,4 @@
-## Faz a boa pra nois
-## Do the good
+## Código criado por @mpcabete
 
 ### Smart Chain Wallet(BUSD/BNB/BCOIN):
 #### 0xbd06182D8360FB7AC1B05e871e56c76372510dDf
