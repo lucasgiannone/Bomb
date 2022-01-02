@@ -20,31 +20,6 @@ pause = c['time_intervals']['interval_between_moviments']
 pyautogui.PAUSE = pause
 
 cat = """
-                                                _
-                                                \`*-.
-                                                 )  _`-.
-                                                .  : `. .
-                                                : _   '  \\
-                                                ; *` _.   `*-._
-                                                `-.-'          `-.
-                                                  ;       `       `.
-                                                  :.       .        \\
-                                                  . \  .   :   .-'   .
-                                                  '  `+.;  ;  '      :
-                                                  :  '  |    ;       ;-.
-                                                  ; '   : :`-:     _.`* ;
-                                               .*' /  .*' ; .*`- +'  `*'
-                                               `*-*   `*-*  `*-*'
-=========================================================================
-========== 💰 Have I helped you in any way? All I ask is a tip! 🧾 ======
-========== ✨ Faça sua boa ação de hoje, manda aquela gorjeta! 😊 =======
-=========================================================================
-======================== vvv BCOIN BUSD BNB vvv =========================
-============== 0xbd06182D8360FB7AC1B05e871e56c76372510dDf ===============
-=========================================================================
-===== https://www.paypal.com/donate?hosted_button_id=JVYSC6ZYCNQQQ ======
-=========================================================================
-
 >>---> Press ctrl + c to kill the bot.
 
 >>---> Some configs can be found in the config.yaml file."""
@@ -75,7 +50,7 @@ def addRandomness(n, randomn_factor_size=None):
 
 
 def moveToWithRandomness(x, y, t):
-    pyautogui.moveTo(addRandomness(x, 10), addRandomness(y, 10), t/1.5)
+    pyautogui.moveTo(addRandomness(x, 10), addRandomness(y, 10), t/5)
 
 
 def remove_suffix(input_string, suffix):
@@ -202,7 +177,7 @@ def scroll():
         pyautogui.scroll(-c['scroll_size'])
     else:
         pyautogui.dragRel(0, -c['click_and_drag_amount'],
-                          duration=0.5, button='left')
+                          duration=1/5, button='left')
 
 
 def clickButtons():
@@ -306,7 +281,7 @@ def goToHeroes():
         login_attempts = 0
 
     # TODO tirar o sleep quando colocar o pulling
-    time.sleep(0.5)
+    time.sleep(1)
     clickBtn(images['hero-icon'])
     time.sleep(randint(1, 3))
 
@@ -449,7 +424,7 @@ def refreshHeroes():
         if buttonsClicked == 0:
             empty_scrolls_attempts = empty_scrolls_attempts - 1
         scroll()
-        time.sleep(0.5)
+        time.sleep(2)
     logger('💪 {} heroes sent to work'.format(hero_clicks))
     goToGame()
 
@@ -475,7 +450,7 @@ def main():
     print('\n')
 
     print(cat)
-    time.sleep(3.5)
+    time.sleep(7)
     t = c['time_intervals']
 
     last = {
@@ -517,7 +492,7 @@ def main():
 
         sys.stdout.flush()
 
-        time.sleep(0.5)
+        time.sleep(1)
 
 
 if __name__ == '__main__':
